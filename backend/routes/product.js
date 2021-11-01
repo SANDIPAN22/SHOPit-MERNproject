@@ -1,21 +1,11 @@
 const express=require('express')
 const router=express.Router();
-const { getProduct}=require('../controllers/productControllers')
+const { getProduct, addProduct, getoneproduct}=require('../controllers/productControllers')
 
-router.get('/list',getProduct)
+router.get('/get/product',getProduct)
 
-// async (req,res)=>{
+router.post('/add/product',addProduct)
 
-//     try{
-//         res.status(200).json({
-//             'message': "sandipan r purono technique!"
-//         })
-//     }
-//     catch(err)
-//     {
-//         res.status(502)
-//     }
-    
-//     }
+router.get('/get/product/:id',getoneproduct)
 
 module.exports=router

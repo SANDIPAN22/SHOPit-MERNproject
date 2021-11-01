@@ -10,4 +10,5 @@ mongoose.connect(process.env.DB_URI)
 .catch((e)=>console.log(`db failed because ${e}`))
 
 app.use('/api/v1',apiContainer)
+
 app.listen(process.env.PORT, ()=>console.log(`app is running at port: ${process.env.PORT} in ${process.env.NODE_ENV} mode`))
